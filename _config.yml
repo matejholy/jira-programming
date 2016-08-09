@@ -1,0 +1,18 @@
+# Setup
+title:        JIRA Programming
+tagline:      JIRA Programming, ScriptRunner & Tempo tips
+baseurl:      "/jira-programming"
+paginate:     1
+
+# About/contact
+author:
+  name:       Matej
+  url:        https://github.com/matejholy/
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown
+highlighter: rouge
