@@ -1,13 +1,16 @@
 ---
 layout: default
 ---
-<a href="{{ site.baseurl }}/" class="backLink">&lt; back to home page</a>
-<hr />
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-{{ content }}
+<article class="post">
+  <h1>{{ page.title }}</h1>
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+  
+  <div class="entry">
+    {{ content }}
+  </div>
 
-<br />
-<hr />
-<a href="{{ site.baseurl }}/" class="backLink">&lt; back to home page</a>
+  {% include disqus.html %}
+</article>

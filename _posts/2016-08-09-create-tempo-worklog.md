@@ -4,6 +4,7 @@ title:  "Creating Tempo 8 Worklog using a ScriptRunner script"
 date:   2016-08-09 0:00:00
 categories: main
 tags: jira, tempo, worklog, scriptrunner
+comments: true
 ---
 
 Adaptavist has [a nice example of how to create a worklog](https://scriptrunner.adaptavist.com/latest/jira/plugins/working-with-tempo.html). However, after upgrading to Tempo 8, the API changed and the script no longer worked. We needed to set a worklog attribute value and simply passing a map of strings to the `create()` function was no longer supported.
