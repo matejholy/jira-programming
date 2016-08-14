@@ -1,15 +1,41 @@
 ---
 layout: post
 title:  "Creating Tempo 8 Worklog using a ScriptRunner script"
-date:   2016-08-09 0:00:00
 categories: main
 tags: jira, tempo, worklog, scriptrunner
 comments: true
 ---
 
-Adaptavist has [a nice example of how to create a worklog](https://scriptrunner.adaptavist.com/latest/jira/plugins/working-with-tempo.html). However, after upgrading to Tempo 8, the API changed and the script no longer worked. We needed to set a worklog attribute value and simply passing a map of strings to the `create()` function was no longer supported.
+Adaptavist has [a nice example of how to create a worklog](https://scriptrunner.adaptavist.com/latest/jira/plugins/working-with-tempo.html). However, after upgrading to Tempo 8, the API changed and simply passing a map of attribute names and values to the `create()` function was no longer supported.
 
-Here's what I've ended up doing:
+So how do we do it in Tempo 8 when we want to specify worklog attributes?
+
+Tell ScriptRunner that we want to work with Tempo and get instance of the `TempoWorklogManager` using the `@WithPlugin` and `@PluginModule` annotations:
+{% highlight groovy %}
+import is.origo.jira.plugin.common.TempoWorklogManager
+
+import com.onresolve.scriptrunner.runner.customisers.PluginModule
+import com.onresolve.scriptrunner.runner.customisers.WithPlugin
+
+@WithPlugin("is.origo.jira.tempo-plugin")
+
+@PluginModule
+TempoWorklogManager tempoWorklogManager
+{% endhighlight %}
+
+Then we get the `WorkAttribute` by calling the `WorkAttributeService`. In this case, we'll be setting a Tempo Account attribute: 
+{% highlight groovy %}
+WorkAttribute attribute
+    = workAttributeService.getWorkAttributeByKey("_Account_").getReturnedValue();
+{% endhighlight %}
+
+After that, we get an instance of the `WorkAttributeValue` and set its value using a `WorkAttributeValue.Builder` class:
+{% highlight groovy %}
+// use account key, not name
+WorkAttributeValue account = new WorkAttributeValue(new Builder(0, attribute, "AD"));
+{% endhighlight %}
+
+Finally, we'll put the account attribute in an `ArrayList` and call `tempoWorklogManager.create()`. Here's the complete script:
 
 {% highlight groovy %}
 import is.origo.jira.plugin.common.TempoWorklogManager
