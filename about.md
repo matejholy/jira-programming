@@ -10,4 +10,6 @@ We've started using [JIRA](https://www.atlassian.com/software/jira) with [Tempo 
 
 ### Contact me
 
+If you have any questions, send me an e-mail. I will help if I can.
+
 [matej.holy@arbes.com](mailto:matej.holy@arbes.com)
