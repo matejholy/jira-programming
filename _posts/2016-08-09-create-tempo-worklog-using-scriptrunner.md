@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Creating Tempo 8 Worklog using a ScriptRunner script"
+excerpt: "How to create Tempo 8 worklog in a ScriptRunner script. Tested in JIRA 7."
 categories: main
 tags: jira, tempo, worklog, scriptrunner
 comments: true

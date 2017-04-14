@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Limiting report display to a project or user group"
+excerpt: "How to display your JIRA report only in specific projects and to specific users. Tested in JIRA 7."
 categories: main
 tags: jira, report
 comments: true

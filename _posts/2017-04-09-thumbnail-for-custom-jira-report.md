@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Setting thumbnail for custom JIRA report"
+excerpt: "How to set own thumbnail for custom JIRA report. Tested in JIRA 7."
 categories: main
 tags: jira, report, thumbnail
 comments: true
