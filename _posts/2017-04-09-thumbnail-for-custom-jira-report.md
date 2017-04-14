@@ -1,17 +1,21 @@
 ---
 layout: post
-title:  "Setting thumbnail for custom JIRA report"
-excerpt: "How to set own thumbnail for custom JIRA report. Tested in JIRA 7."
+title:  "How to set a thumbnail for custom JIRA report"
+excerpt: "How to set your own thumbnail for custom JIRA report. Tested in JIRA 7."
 categories: main
 tags: jira, report, thumbnail
 comments: true
 ---
 
-A couple of days ago I needed to display my own thumbnail for custom JIRA report, but forgot how to do it. Here are the instructions so I know to come here the next time.
+How to set your own thumbnail for custom JIRA report? I'll show you in this post.
 
 *These instructions have been tested in JIRA 7.2.2.*
 
+__Create the thumbnail image__
+
 Create the thumbnail as .png image. The _largest usable size is 268 x 140 px_. If the image is smaller, it will be displayed in the center of the thumbnail area. Save the image in the `*plugin_root*\src\main\resources\images` folder.
+
+__Add some css__
 
 Add the following code to your report's css file (the one specified in the `web-resource` section of the `atlassian-plugin.xml`). You can use any css class name you want, but the `:before` selector is important.
 Optionally, add width and height properties that match the thumbnail size (e.g. `width: 268px; height: 140px;`) to speed up page display.
@@ -22,6 +26,8 @@ body .test-report-thumbnail:before {
   background-repeat: no-repeat;
 }
 {% endhighlight %}
+
+__Modify your atlassian-plugin.xml__
 
 Add a new context `com.atlassian.jira.project.reports.page` to the `web-resource` in your `atlassian-plugin.xml` file:
 
