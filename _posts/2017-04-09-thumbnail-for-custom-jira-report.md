@@ -13,7 +13,7 @@ How to set your own thumbnail for custom JIRA report? I'll show you in this post
 
 __Create the thumbnail image__
 
-Create the thumbnail as .png image. The _largest usable size is 268 x 140 px_. If the image is smaller, it will be displayed in the center of the thumbnail area. Save the image in the `*plugin_root*\src\main\resources\images` folder.
+Create the thumbnail as .png image. The _maximum [oficially supported dimensions](https://developer.atlassian.com/jiradev/latest-updates/developer-changes-for-older-jira-versions/preparing-for-jira-6-4#PreparingforJIRA6.4-reportpluginmodule) are 268 x 138 px_ (height of 140px seems to be working too, though). If the image is smaller, it will be displayed in the center of the thumbnail area. Save the image in the `*plugin_root*\src\main\resources\images` folder.
 
 __Add some css__
 
