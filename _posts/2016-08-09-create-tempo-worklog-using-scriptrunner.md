@@ -9,6 +9,10 @@ redirect_from:
   - /main/2016/08/09/create-tempo-worklog.html
 ---
 
+**2019 update**: The code below no longer works with later versions of Tempo. Seems like the link on Adaptavist site below has been updated, so you can try that one. However now I highly recommend using the official [Tempo REST API](http://developer.tempo.io/doc/timesheets/api/rest/latest/#1799179586). It is definitely more stable than trying to call Tempo objects direcly. Don't worry about the _deprecated_ comment at the `worklogAttributes` JSON array. It works all right.
+
+---
+
 Adaptavist has [a nice example of how to create a worklog](https://scriptrunner.adaptavist.com/latest/jira/plugins/working-with-tempo.html). However, after upgrading to Tempo 8, the API changed and simply passing a map of attribute names and values to the `create()` function was no longer supported.
 
 So how do we do it in Tempo 8 when we want to specify worklog attributes?
