@@ -9,7 +9,7 @@ redirect_from:
   - /main/2016/08/09/create-tempo-worklog.html
 ---
 
-**2019 update**: The code below no longer works with later versions of Tempo. Seems like the link on Adaptavist site below has been updated, so you can try that one. However now I highly recommend using the official [Tempo REST API](http://developer.tempo.io/doc/timesheets/api/rest/latest/#1799179586). It is definitely more stable than trying to call Tempo objects direcly. Don't worry about the _deprecated_ comment at the `worklogAttributes` JSON array. It works all right.
+**2019 update**: The code below no longer works with later versions of Tempo. Seems like the link on Adaptavist site below has been updated, so you can try that one. However now I highly recommend using the official [Tempo REST API](http://developer.tempo.io/doc/timesheets/api/rest/latest/#1799179586). It is definitely more stable than trying to call Tempo objects directly. Don't worry about the _deprecated_ comment at the `worklogAttributes` JSON array. It works all right.
 
 ---
 
