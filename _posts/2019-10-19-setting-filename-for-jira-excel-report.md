@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Set filename for JIRA Excel report"
+title:  "Setting filename for JIRA Excel report"
 description: "If you don't know about it yet, there's a great tutorial on writing JIRA 7 server plugins."
 categories: main
 tags: jira, server, report, excel, download, tutorial
