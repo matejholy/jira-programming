@@ -37,7 +37,9 @@ footer-links:
 disqus: jira-programming
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-82263048-1
+google_analytics:
+# Enter your Google Tag Manager ID (e.g. GTM-A00B00) to activate tracking
+google_tag_manager: GTM-P6ZP7TX
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
